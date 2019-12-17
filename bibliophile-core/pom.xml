@@ -1,136 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.2.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
-  </parent>
-  <groupId>com.codeball.bibliophile</groupId>
+  <groupId>com.codeSourc3.bibliophile</groupId>
   <artifactId>bibliophile-core</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>bibliophile-core</name>
-  <properties>
-    <java.version>13</java.version>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-rest</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-mail</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-thymeleaf</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.session</groupId>
-      <artifactId>spring-session-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.junit.vintage</groupId>
-          <artifactId>junit-vintage-engine</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>com.h2database</groupId>
-    	<artifactId>h2</artifactId>
-    	<scope>runtime</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>downloads-maven-plugin</artifactId>
-				<version>0.6</version>
-				<configuration>
-					<description>Official ${project.name} build of the ${project.version} release</description>
-					<override>true</override>
-					<includeAttached>true</includeAttached>
-					<server>github</server>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>upload</goal>
-						</goals>
-						<phase>install</phase>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.7</version>
-				<configuration>
-					<message>Building site for ${project.version}</message>
-					<server>github</server>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>site</phase>
-					</execution>
-				</executions>
-			</plugin>
-    </plugins>
-  </build>
-  <url>https://github.com/codeSourc3/bibliophile</url>
-  <issueManagement>
-  	<url>https://github.com/codeSourc3/bibliophile/issues</url>
-  	<system>Github Issues</system>
-  </issueManagement>
-  <scm>
-  	<url>https://github.com/codeSourc3/bibliophile</url>
-  	<connection>scm:git:git://github.com/codeSourc3/bibliophile.git</connection>
-  	<developerConnection>scm:git:git@github.com:codeSourc3/bibliophile.git</developerConnection>
-  </scm>
   <packaging>pom</packaging>
   <modules>
-  	<module>bibliophile-api</module>
+  	<module>api</module>
+  	
+  	
+  	<module>web</module>
+  	<module>webapp</module>
   </modules>
-  <organization>
-  	<name>Codeball</name>
-  </organization>
-  <description>Main repository for the core of Bibliophile.</description>
 </project>
