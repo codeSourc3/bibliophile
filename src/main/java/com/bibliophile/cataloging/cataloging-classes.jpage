@@ -1,0 +1,45 @@
+public abstract class CatalogedResource implements Indexable, Findable {
+	
+	private List<Subject> subjects;
+	private List<CatalogedItem> items;
+	private List<Identifier> identifiers;
+	private Title title;
+	private List<Contributor> contributors;
+	
+	public CatalogedResource(Title title, List<Subject> subjects) {
+		this.title = title;
+		this.subjects = subjects;
+	}
+}
+
+public class Publication {
+	private final LocalDate dateOfPublication;
+	private final Location placeOfPublication;
+	private final PublisherId publisher;
+	
+	private Publication(LocalDate dateOfPublication, Location placeOfPublication, Publisher publisher) {
+		this.dateOfPublication = dateOfPublication;
+		this.placeOfPublication = placeOfPublication;
+		this.publisher = publisher.getId();
+	}
+	
+	public static Publication published(LocalDate datePublished, Location location, Publisher publisher) {
+		return new Publication(datePublished, location, publisher);
+	}
+}
+
+
+public class CatalogedItem {
+	private CallNumber callNumber;
+	private Format format;
+	private CatalogedItemStatus itemStatus;
+	private Long acquisitionNumber; // Its Id
+	
+	public CatalogedItem(CatalogedResource resource, Format format) {
+		
+	}
+}
+
+ClassificationResult
+CallNumber
+ClassificationInformation
