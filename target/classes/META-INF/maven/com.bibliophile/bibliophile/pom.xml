@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bibliophile</groupId>
+  <artifactId>bibliophile</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Bibliophile ILS</name>
+  
+  <description>Open-source Integrated Library System (ILS) written in Java practicing domain-driven design (DDD).</description>
+  
+  <properties>
+  	<maven.compiler.source>13</maven.compiler.source>
+  	<maven.compiler.target>13</maven.compiler.target>
+  </properties>
+  <!-- Use script below to force Eclipse to use JDK 13 -->
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<configuration>
+  				<source>13</source>
+  				<target>13</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>
